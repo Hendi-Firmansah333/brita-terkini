@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portal informasi dan pengumuman terbaru.">
+  <title>KabarKini — Berita & Pengumuman</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="topline">
+    <div class="container topbar">
+      <span id="todayDate">Informasi terkini untuk kamu</span>
+      <span class="topbar-note"><span class="live-dot"></span> Update informasi terbaru</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#" aria-label="KabarKini beranda">
+        <span class="brand-mark">K<span>.</span></span>
+        <span class="brand-name">Kabar<span>Kini</span><small>BERITA & PENGUMUMAN</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Navigasi utama">
+        <a class="nav-link active" href="#beranda">Beranda</a>
+        <a class="nav-link" href="#berita">Berita</a>
+        <a class="nav-link" href="#pengumuman">Pengumuman</a>
+        <a class="nav-link" href="#tentang">Tentang</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu navigasi" aria-expanded="false">☰</button>
+      <a class="header-cta" href="#pengumuman">Lihat Pengumuman <span>↗</span></a>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Navigasi mobile">
+      <a href="#beranda">Beranda</a><a href="#berita">Berita</a><a href="#pengumuman">Pengumuman</a><a href="#tentang">Tentang</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" id="beranda">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> INFORMASI DALAM SATU TEMPAT</div>
+        <h1>Kabar terbaru,<br><span>lebih dekat.</span></h1>
+        <p class="hero-description">Temukan berita, agenda, dan pengumuman penting yang perlu kamu ketahui. Ringkas, terpercaya, dan selalu relevan.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#berita">Jelajahi Berita <span>↗</span></a>
+          <a class="text-link" href="#pengumuman">Baca pengumuman <span>→</span></a>
+        </div>
+        <div class="hero-meta">
+          <div class="avatar-stack"><span>H</span><span>K</span><span>N</span></div>
+          <p><strong>Informasi lebih terarah</strong><br><small>Berita dan agenda dalam satu halaman</small></p>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="visual-orb orb-one"></div><div class="visual-orb orb-two"></div>
+        <div class="visual-label"><span class="live-dot"></span> PILIHAN EDITOR</div>
+        <div class="feature-card">
+          <div class="feature-image">
+            <div class="image-sun"></div><div class="image-hill hill-back"></div><div class="image-hill hill-front"></div>
+            <span class="image-caption">CERITA HARI INI</span>
+          </div>
+          <div class="feature-content">
+            <span class="category-pill">Sorotan</span>
+            <h2>Informasi yang baik dimulai dari sumber yang tepat.</h2>
+            <p>Jadikan kabar terbaru sebagai langkah awal untuk terus berkembang.</p>
+            <div class="feature-footer"><span>Tim KabarKini</span><span>•</span><span>3 menit baca</span></div>
+          </div>
+        </div>
+        <div class="floating-note"><span class="note-icon">✦</span><span><strong>Selalu terhubung</strong><small>Jangan lewatkan kabar penting</small></span></div>
+      </div>
+    </section>
+
+    <section class="ticker">
+      <div class="container ticker-inner"><span class="ticker-label">KABAR TERKINI</span><span class="ticker-text">Satu halaman untuk berita, agenda, dan pengumuman penting.</span><span class="ticker-arrow">↗</span></div>
+    </section>
+
+    <section class="section container" id="berita">
+      <div class="section-heading">
+        <div><div class="eyebrow"><span class="eyebrow-line"></span> JANGAN TERTINGGAL</div><h2>Berita <span>terbaru.</span></h2><p>Ikuti cerita dan informasi pilihan hari ini.</p></div>
+        <div class="filter-wrap">
+          <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Cari berita..." aria-label="Cari berita"></label>
+          <select id="categoryFilter" aria-label="Filter kategori"><option value="Semua">Semua kategori</option><option value="Kampus">Kampus</option><option value="Teknologi">Teknologi</option><option value="Komunitas">Komunitas</option></select>
+        </div>
+      </div>
+      <div class="news-grid" id="newsGrid">
+        <article class="news-card" data-category="Kampus" data-search="agenda kampus kegiatan mahasiswa">
+          <div class="news-art art-campus"><span class="art-symbol">✳</span><span class="art-tag">KAMPUS</span><div class="art-lines"></div></div>
+          <div class="news-body"><div class="card-meta"><span>Kampus</span><span>•</span><span>5 menit baca</span></div><h3>Agenda kampus: ruang baru untuk ide dan kolaborasi</h3><p>Simak rangkaian kegiatan dan kesempatan berpartisipasi dalam agenda kampus mendatang.</p><a class="card-link" href="#pengumuman">Baca selengkapnya <span>↗</span></a></div>
+        </article>
+        <article class="news-card" data-category="Teknologi" data-search="teknologi digital inovasi mahasiswa">
+          <div class="news-art art-tech"><span class="art-symbol">⌘</span><span class="art-tag">TEKNOLOGI</span><div class="tech-orbit"></div></div>
+          <div class="news-body"><div class="card-meta"><span>Teknologi</span><span>•</span><span>4 menit baca</span></div><h3>Berinovasi di era digital, mulai dari hal sederhana</h3><p>Ide kecil bisa menjadi solusi besar saat dikembangkan secara konsisten dan kolaboratif.</p><a class="card-link" href="#pengumuman">Baca selengkapnya <span>↗</span></a></div>
+        </article>
+        <article class="news-card" data-category="Komunitas" data-search="komunitas kolaborasi relawan kegiatan">
+          <div class="news-art art-community"><span class="art-symbol">◎</span><span class="art-tag">KOMUNITAS</span><div class="community-shape"></div></div>
+          <div class="news-body"><div class="card-meta"><span>Komunitas</span><span>•</span><span>3 menit baca</span></div><h3>Kolaborasi yang tumbuh dari kepedulian bersama</h3><p>Berbagi ide, pengalaman, dan aksi nyata untuk menciptakan dampak positif di sekitar kita.</p><a class="card-link" href="#pengumuman">Baca selengkapnya <span>↗</span></a></div>
+        </article>
+      </div>
+      <p class="empty-state" id="emptyState" hidden>Berita tidak ditemukan. Coba kata kunci atau kategori lain.</p>
+    </section>
+
+    <section class="announcement-section" id="pengumuman">
+      <div class="container announcement-layout">
+        <div class="announcement-intro">
+          <div class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> CATAT TANGGALNYA</div>
+          <h2>Pengumuman<br><span>penting.</span></h2>
+          <p>Informasi agenda dan pemberitahuan yang perlu kamu perhatikan.</p>
+          <a class="button button-light" href="#kontak">Ada pertanyaan? <span>↗</span></a>
+        </div>
+        <div class="announcement-list">
+          <article class="announcement-item">
+            <div class="date-block"><strong>21</strong><span>OKT</span></div>
+            <div class="announcement-copy"><span class="status status-new">PENGUMUMAN</span><h3>Pembaruan agenda kegiatan dan koordinasi tim</h3><p>Periksa informasi waktu, lokasi, dan persiapan sebelum kegiatan berlangsung.</p></div>
+            <span class="announcement-arrow">↗</span>
+          </article>
+          <article class="announcement-item">
+            <div class="date-block"><strong>24</strong><span>OKT</span></div>
+            <div class="announcement-copy"><span class="status status-info">AGENDA</span><h3>Periode pengumpulan ide dan karya dibuka</h3><p>Siapkan ide terbaikmu dan ikuti petunjuk pengumpulan yang telah ditentukan.</p></div>
+            <span class="announcement-arrow">↗</span>
+          </article>
+          <article class="announcement-item">
+            <div class="date-block"><strong>28</strong><span>OKT</span></div>
+            <div class="announcement-copy"><span class="status status-reminder">PENGINGAT</span><h3>Pastikan data dan berkas sudah diperiksa</h3><p>Periksa kembali kelengkapan data agar proses berikutnya berjalan lancar.</p></div>
+            <span class="announcement-arrow">↗</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter container" id="tentang">
+      <div class="newsletter-icon">✳</div>
+      <div><div class="eyebrow"><span class="eyebrow-line"></span> TETAP TERHUBUNG</div><h2>Informasi penting,<br><span>tanpa terlewat.</span></h2><p>Masukkan email untuk mencoba interaksi formulir pada halaman ini.</p></div>
+      <form class="newsletter-form" id="newsletterForm"><label for="emailInput">Alamat email</label><div class="email-control"><input id="emailInput" type="email" placeholder="nama@email.com" required><button type="submit" aria-label="Kirim email">→</button></div><small id="formMessage">Demo front-end: data tidak dikirim ke server.</small></form>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="kontak">
+    <div class="container footer-main">
+      <a class="brand brand-footer" href="#beranda"><span class="brand-mark">K<span>.</span></span><span class="brand-name">Kabar<span>Kini</span><small>BERITA & PENGUMUMAN</small></span></a>
+      <p>Informasi jelas. Langkah lebih pasti.</p>
+      <div class="footer-links"><a href="#berita">Berita</a><a href="#pengumuman">Pengumuman</a><a href="mailto:halo@kabarkini.example">Kontak</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="year"></span> KabarKini. Proyek latihan Git & SCM.</span><span>Dibuat untuk belajar, dikembangkan dengan rasa ingin tahu. ✦</span></div>
+  </footer>
+</body>
+</html>
